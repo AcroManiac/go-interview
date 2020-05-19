@@ -1,2 +1,3 @@
 # go-interview
-Golang interview tasks and solutions
+Решение технических задач при подготовке и прохождении
+собеседований на вакансию "Разработчик Golang"
