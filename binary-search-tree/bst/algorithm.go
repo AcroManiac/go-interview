@@ -15,3 +15,20 @@ func printPreOrder(n *Node) {
 	printPreOrder(n.Left)
 	printPreOrder(n.Right)
 }
+
+func (t *Tree) Depth() int {
+	return findDepth(t.root)
+}
+
+func findDepth(n *Node) int {
+	if n == nil {
+		return 0
+	}
+
+	leftDepth := findDepth(n.Left)
+	rightDepth := findDepth(n.Right)
+	if leftDepth > rightDepth {
+		return leftDepth + 1
+	}
+	return rightDepth + 1
+}
